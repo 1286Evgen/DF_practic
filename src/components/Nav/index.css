@@ -30,7 +30,7 @@
     position: relative;
     padding-bottom: 1rem;
 }
-.nav__Link {
+.nav__link {
     height: 100%;
     display: flex;
     align-items: center;
@@ -38,7 +38,7 @@
     justify-content: flex-end;
     color: grey;
 }
-.nav__Link:hover {
+.nav__link:hover {
     color: black;
 }
 .nav__item:hover>.nav_submenu {

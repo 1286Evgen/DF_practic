@@ -30,7 +30,7 @@ const Link = ({
                             className="nav__image"
                             />    
                         }
-                        {imgType === "icon" && <i className={`nav__icon${imgPath}`}/>}
+                        {imgType === "icon" && <i className={`nav__icon ${imgPath}`}/>}
                         {title}
                     </RouterLink>
                     {children}
