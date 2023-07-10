@@ -51,7 +51,7 @@
     flex-direction: column;
 }
 .nav__image {
-
+    height: 3rem;
 }
 .nav__icon {
     font-size: 3rem;

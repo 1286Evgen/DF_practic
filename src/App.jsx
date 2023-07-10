@@ -19,6 +19,7 @@ import menu from "./assets/data/menu.json";
 
 import Layout from "./components/Layout";
 import Nav from "./components/Nav";
+import Logo from "./components/Logo";
 
 
 function App() {
@@ -82,6 +83,7 @@ function App() {
   return (
     <Main.Provider value={mainCtx}>
       <Layout>
+        <Logo/>
         <Nav menu={menu.header}/>
       </Layout>
       <Routes>

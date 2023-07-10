@@ -12,7 +12,7 @@ const Logo = ({
             <Link
                 path="/"
                 title="DogFood"
-                ingType="image"
+                imgType="image"
                 imgPath={Corgi.logo}
                 position={position}
             />
