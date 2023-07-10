@@ -4,9 +4,20 @@ import {Link} from "../Nav";
 import "./index.css";
 
 const Logo = ({
+    position = "horizontal"
 
-}) => return (
-
-)
+}) => {
+    return (
+        <div className="logo">
+            <Link
+                path="/"
+                title="DogFood"
+                ingType="image"
+                imgPath={Corgi.logo}
+                position={position}
+            />
+        </div>
+    )
+}
 
 export default Logo;
