@@ -4,7 +4,7 @@ import {Link} from "../Nav";
 import "./index.css";
 
 const Logo = ({
-    position = "horizontal"
+    position = "horizontal" // horizontal vertical
 
 }) => {
     return (
