@@ -14,6 +14,8 @@ import {
 } from "./pages";
 import Main from "./context/main";
 import Api from "./Api";
+
+import Header from "./components/Header";
 import staticNews from "./assets/data/news.json";
 
 function App() {
@@ -76,6 +78,7 @@ function App() {
 
   return (
     <Main.Provider value={mainCtx}>
+      <Header/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/products" element={<Products/>}/>
