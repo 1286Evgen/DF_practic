@@ -82,10 +82,6 @@ function App() {
 
   return (
     <Main.Provider value={mainCtx}>
-      <Layout>
-        <Logo/>
-        <Nav menu={menu.header}/>
-      </Layout>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/products" element={<Products/>}/>
