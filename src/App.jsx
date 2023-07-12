@@ -1,5 +1,5 @@
-import {Routes, Route, Link} from "react-router-dom";
-import {useState, useEffect} from "react";
+import { Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import {
   About,
@@ -15,12 +15,6 @@ import {
 import Main from "./context/main";
 import Api from "./Api";
 import staticNews from "./assets/data/news.json";
-import menu from "./assets/data/menu.json";
-
-import Layout from "./components/Layout";
-import Nav from "./components/Nav";
-import Logo from "./components/Logo";
-
 
 function App() {
   let news_1 = sessionStorage.getItem("dog-news");
