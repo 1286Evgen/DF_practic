@@ -36,10 +36,10 @@
     align-items: center;
     gap: 1rem;
     justify-content: flex-end;
-    color: grey;
+    opacity: 70%;
 }
 .nav__link:hover {
-    color: black;
+    opacity: 100%;
 }
 .nav__item:hover>.nav_submenu {
     display: flex;
