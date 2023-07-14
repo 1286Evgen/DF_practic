@@ -34,6 +34,7 @@ function App() {
   const [token, setToken] = useState(localStorage.getItem("user-token"));
   const [userId, setUserId] = useState(localStorage.getItem("user-id"));
   const [api, setApi] = useState(new Api(token));
+  const [screen, setScreen] = useState(window.innerWidth)
 
   useEffect(() => {
     if (process.env.NODE_ENV === "development") {
@@ -58,6 +59,9 @@ function App() {
     else {
       setNews(staticNews);
     }
+    window.addEventListener("resize", () => {
+      setScreen(window.innerWidth);
+    })
   }, []);
 
   useEffect(() => {
@@ -73,7 +77,8 @@ function App() {
     newsLenta,
     api,
     userId,
-    setUserId
+    setUserId,
+    screen
   }
 
   return (
