@@ -22,7 +22,7 @@ const Header = () => {
                         <button className="card__btn">
                             <i className="lni lni-menu"/>
                         </button>
-                        <Nav menu={menu.header}/>
+                        <Nav menu={menu.header} position="vertical"/>
                     </>
                     : <Nav menu={menu.header}/>
                 }
