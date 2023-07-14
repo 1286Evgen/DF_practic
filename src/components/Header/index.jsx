@@ -10,9 +10,12 @@ const Header = () => {
     return (
         <header className="header">
             <Layout>
-            <Logo/>
-            <Search/>
-            <Nav menu={menu.header}/>
+                <Logo/>
+                <Search/>
+                <button className="card__btn">
+                    <i className="lni lni-menu"/>
+                </button>
+                <Nav menu={menu.header}/>
             </Layout>
         </header>
     )
