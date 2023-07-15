@@ -21,8 +21,10 @@ const Header = () => {
                 {screen < 1064
                     ? <>
                         <button 
-                            className="card__btn header__btn"
-                            onClick={()}>
+                            className={`card__btn header__btn ${showMenu} 
+                            ? "header__btn_active"
+                            : ""`}
+                            onClick={() => setShowMenu(!showMenu)}>
                             <i className="lni lni-menu"/>
                         </button>
                         <Nav menu={menu.header} position="vertical"/>
