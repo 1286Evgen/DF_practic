@@ -13,12 +13,22 @@ const Card = ({
     reviews
 }) => {
     const tag = tags[tags.length - 1];
-    const imgStyle = {
-        backgroundImage: `url(${pictures})`
+    const imgStyle = {backgroundImage: `url(${pictures})`}
+    const tagHandler = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    const basketHandler = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    const likeHandler = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
     }
     return (
     <Link className="card" to={`/product/${_id}`}>
-        <button className={`card__tag card__tag_${tag}`}>{tag}</button>
+        <button className={`card__button card__tag card__tag_${tag}`}>{tag}</button>
         <span className="card__img" style={imgStyle}></span>
         <span className="card__content">
             <span className="card__title">{name}</span>
@@ -26,18 +36,13 @@ const Card = ({
                 {reviews.length}
             </span>
             <span className="card__price">{price}</span>
-            <button>В корзину</button>
-            <button>Like</button>
+            <span className="card__buttons">
+                <button className="card__button card__button_basket">В корзину</button>
+                <button className="card__button">Like</button>
+            </span>
         </span>
     </Link>
     )
 }
-/*
-    const Card = () => {
-    return (
-    <>
-    </>
-    )
-    }
-*/
+
 export default Card;
