@@ -24,9 +24,8 @@ export function Home () {
             </Layout>
             {goodsData.length > 0 && 
             <Layout dt={4} mb={2} title="Новинки">
-                {goodsData.map(el => <Card rey={el._id} {...el}/>)}
-            </Layout>
-            }
+                {goodsData.map(el => <Card key={el._id} {...el}/>)}
+            </Layout>}
             {news.length > 0 && 
             <Layout mb={2} dt={4} title="Последние новости">
                 <Carousel 
@@ -40,9 +39,8 @@ export function Home () {
             </Layout>
             {goodsData.length > 0 && 
             <Layout dt={4} mb={2} title="Популярные товары">
-                {goodsData.map(el => <Card rey={el._id} {...el}/>)}
-            </Layout>
-            }
+                {goodsData.map(el => <Card key={el._id} {...el}/>)}
+            </Layout>}
             <Layout mb={1} dt={2} title="Новости Lenta.ru">
                 {newsLenta.length > 0 && <Carousel 
                 data={newsLenta.map((el, i) => <News key={`new-${i}`} data={el}/>)}
@@ -52,6 +50,13 @@ export function Home () {
             <Layout dt={2}>
                 <Adds {...addsData[3]}/>
                 <Adds {...addsData[4]}/>
+            </Layout>
+            {goodsData.length > 0 && 
+            <Layout dt={4} mb={2} title="Недавно просмотренные товары">
+                {goodsData.map(el => <Card key={el._id} {...el}/>)}
+            </Layout>}
+            <Layout>
+                <Adds {...addsData[5]}/>
             </Layout>
         </>
     )
