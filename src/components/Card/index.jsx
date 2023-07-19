@@ -1,6 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./index.css";
+
 
 const Card = ({
     _id,
@@ -12,23 +14,32 @@ const Card = ({
     likes,
     reviews
 }) => {
+    const [isLike, setIsLike] = useState(likes.includes(3));
+    const [inBasket, setInBasket] = useState(false);
+    const navigate = useNavigate();
     const tag = tags[tags.length - 1];
     const imgStyle = {backgroundImage: `url(${pictures})`}
     const tagHandler = (e) => {
         e.preventDefault();
         e.stopPropagation();
+        navigate(`/products/category/${tag}`);
     }
     const basketHandler = (e) => {
         e.preventDefault();
         e.stopPropagation();
+        setInBasket(!inBasket);
     }
     const likeHandler = (e) => {
         e.preventDefault();
         e.stopPropagation();
+        setIsLike(!isLike);
     }
     return (
     <Link className="card" to={`/product/${_id}`}>
-        <button className={`card__button card__tag card__tag_${tag}`}>{tag}</button>
+        {tag && <button 
+        className={`card__button card__tag card__tag_${tag}`}
+        onClick={tagHandler}>
+        {tag}</button>}
         <span className="card__img" style={imgStyle}></span>
         <span className="card__content">
             <span className="card__title">{name}</span>
@@ -37,8 +48,22 @@ const Card = ({
             </span>
             <span className="card__price">{price}</span>
             <span className="card__buttons">
-                <button className="card__button card__button_basket">В корзину</button>
-                <button className="card__button">Like</button>
+                {inBasket 
+                ? <button 
+                    className="card__button card__button_basket"
+                    onClick={basketHandler}><i className="lni lni-cart-full"/> В корзине
+                </button> 
+                : <button 
+                    className="card__button card__button_basket"
+                    onClick={basketHandler}><i className="lni lni-cart"/> В корзину
+                </button>}
+                <button 
+                className="card__button"
+                onClick={likeHandler}>
+                {isLike 
+                ? <i className="lni lni-heart-fill"/>
+                : <i className="lni lni-heart"/>}
+                </button>
             </span>
         </span>
     </Link>

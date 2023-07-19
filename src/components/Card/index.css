@@ -48,6 +48,10 @@
     padding: 1rem;
     opacity: 70%;
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .card__button:hover {
@@ -82,4 +86,8 @@
 
 .card__tag_outerwear {
     background-color: darkslateblue;
+}
+
+.card .lni {
+    font-size: 2rem;
 }
