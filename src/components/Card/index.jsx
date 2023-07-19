@@ -44,9 +44,25 @@ const Card = ({
         <span className="card__content">
             <span className="card__title">{name}</span>
             <span className="card__rate">
-                {reviews.length}
+                <span>
+                    <i className="lni lni-star-fill"></i>
+                </span> 
+                <span className="card__review">
+                {reviews.length> 0 
+                ? `${reviews.length} отзывов`
+                : "нет отзывов"
+                }
+                </span>
             </span>
-            <span className="card__price">{price}</span>
+            <span className="card__price">
+                {discount > 0 
+                ? <>
+                {Math.ceil(price * ((100 - discount)/100))} Р 
+                <del className="card__price_discount">{price} Р</del>
+                </>
+                : price + " Р"
+                }
+            </span>
             <span className="card__buttons">
                 {inBasket 
                 ? <button 
