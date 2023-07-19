@@ -43,16 +43,23 @@ const Card = ({
         <span className="card__img" style={imgStyle}></span>
         <span className="card__content">
             <span className="card__title">{name}</span>
-            <span className="card__rate">
-                <span>
+            <span className="card__info">
+                {reviews.length 
+                ? 
+                <span className="card__rate">
+                    <i className="lni lni-star-fill"></i>
+                    {(reviews.reduce((acc, el) => acc + el.rating, 0)/reviews.length).toFixed(1)}
+                </span>
+                :
+                <span className="card__rate card__rate_empty">
                     <i className="lni lni-star-fill"></i>
                 </span> 
+                }
                 <span className="card__review">
                 {reviews.length> 0 
                 ? `${reviews.length} отзывов`
-                : "нет отзывов"
-                }
-                </span>
+                : "нет отзывов"}
+                </span> 
             </span>
             <span className="card__price">
                 {discount > 0 

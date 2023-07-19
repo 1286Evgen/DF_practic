@@ -18,7 +18,7 @@
 .card__content {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     padding: 2rem;
 }
 
@@ -27,8 +27,25 @@
     overflow: hidden;
 }
 
-.card__rate {
+.card__info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1.8rem;
+}
 
+.card__rate {
+    display: flex;
+    gap: .4rem;
+    align-items: center;
+}
+
+.card__review {
+    color: silver;
+}
+
+.card__rate_empty {
+    color: silver;
 }
 
 .card__price {
@@ -93,5 +110,9 @@
 }
 
 .card .lni {
-    font-size: 2rem;
+    font-size: 1.4rem;
+}
+
+.card__info .lni {
+    font-size: 1rem;
 }
