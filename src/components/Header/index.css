@@ -1,7 +1,26 @@
-header {
+.header {
     box-shadow: 0 0 2px silver;
 }
 .header>.layout {
     display: flex;
     justify-content: space-between;
+}
+.header__btn {
+    font-size: 3rem;
+}
+.header__btn+.nav {
+    position: absolute;
+    /*display: none;*/
+    right: 0;
+    top: calc(100% - 3rem);
+    z-index: 1;
+    background-color: white;
+    align-items: flex-start;
+    padding: 2rem;
+    box-shadow: 0 0 2px silver;
+    transform: translate(100%, 0);
+    transition: transform 300ms;
+}
+.header__btn_active+.nav {
+    transform: translate(0, 0);
 }

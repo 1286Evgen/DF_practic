@@ -21,9 +21,9 @@ const Header = () => {
                 {screen < 1064
                     ? <>
                         <button 
-                            className={`card__btn header__btn ${showMenu} 
+                            className={`card__btn header__btn ${showMenu
                             ? "header__btn_active"
-                            : ""`}
+                            : ""}`}
                             onClick={() => setShowMenu(!showMenu)}>
                             <i className="lni lni-menu"/>
                         </button>
