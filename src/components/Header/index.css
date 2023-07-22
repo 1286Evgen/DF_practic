@@ -1,8 +1,13 @@
 .header {
     box-shadow: 0 0 2px silver;
 }
+.header .form__row_search {
+    order: 1;
+    min-width: 100%;
+}
 .header>.layout {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .header__btn {
@@ -13,7 +18,7 @@
     position: absolute;
     display: none;
     right: 0;
-    top: calc(100% - 3rem);
+    top: 10rem;
     z-index: 1;
     background-color: white;
     align-items: flex-start;
@@ -42,4 +47,10 @@
 .header__btn_active+.nav {
     display: flex;
     transform: translate(0, 0);
+}
+@media screen and (min-width: 1064px) {
+    .header .form__row_search {
+        order: 0;
+        min-width: auto;
+    }
 }
