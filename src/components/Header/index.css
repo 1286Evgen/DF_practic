@@ -11,7 +11,7 @@
 .header__btn+.nav {
     gap: 1rem;
     position: absolute;
-    /*display: none;*/
+    display: none;
     right: 0;
     top: calc(100% - 3rem);
     z-index: 1;
@@ -29,11 +29,17 @@
 .header__btn+.nav .nav__link {
     justify-content: flex-start;
 }
+.header__btn+.nav .nav__icon {
+    font-size: 2rem;
+}
 .header__btn+.nav .nav_submenu {
     position: static;
     display: flex;
     border: none;
+    gap: 1rem;
+    padding: 1rem 0 0 3rem;
 }
 .header__btn_active+.nav {
+    display: flex;
     transform: translate(0, 0);
 }
