@@ -1,5 +1,7 @@
+import Layout from "../components/Layout";
+
 export function Delivery () {
-    return <>
+    return <Layout>
         <h1>Доставка</h1>
-    </>
+    </Layout>
 }

@@ -1,5 +1,7 @@
+import Layout from "../components/Layout";
+
 export function Profile () {
-    return <>
+    return <Layout>
         <h1>Профиль</h1>
-    </>
+    </Layout>
 }
