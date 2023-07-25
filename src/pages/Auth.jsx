@@ -9,7 +9,7 @@ import Layout from "../components/Layout";
 export function Auth () {
     return (
     <Layout>
-        <h1>Страница авториции</h1>
+        <h1>Страница авторизации</h1>
         <div>
             <Input/>
             <Select values={[1,2,3,4]}/>
