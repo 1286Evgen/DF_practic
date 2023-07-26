@@ -5,13 +5,12 @@
             "label": "Ваше имя",
             "attr": {
                 "type": "text",
-                "required": true,
                 "placeholder": "Лютиков Игорь"
             }
         },
         "about": {
             "format": "textarea",
-            "label": ""
+            "label": "Информация о себе"
         },
         "avatar": {
             "format": "input",
@@ -53,12 +52,14 @@
             }
         }
     },
-    "product": {          
+    "product": {
+        "name": {          
         "format": "input",
         "label": "Название товара",
         "attr": {
             "type": "text",
             "required": true  
+            }
         },
         "price": {          
             "format": "input",
