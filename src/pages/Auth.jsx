@@ -1,14 +1,6 @@
-import {
-    Input,
-    Search,
-    Select,
-    Textarea
-} from "../components/Form";
-
+import { Search } from "../components/Form";
 import Form from "../components/Form";
-
 import Layout from "../components/Layout";
-
 
 export function Auth () {
     return (
@@ -17,6 +9,7 @@ export function Auth () {
         <div style={{width: "400px"}}>
             <Form/>
         </div>
+        <Search/>
     </Layout>
     )
 }

@@ -1,7 +1,8 @@
 const Input = ({
     name,
     label,
-    attr
+    attr,
+    state
     }) => {
     return (
         <div className="form__row">
@@ -10,7 +11,13 @@ const Input = ({
                 {attr?.required && <>&nbsp;<span 
                 className="form__label_req">*</span></>}         
             </label>
-            <input className="form__input" id={name} {...attr}/>
+            <input 
+                className="form__input" 
+                id={name} 
+                {...attr}
+                value = {state[0]}
+                onChange = {(e) => state[1](e.target.value)}
+            />
         </div>
     )
 }
