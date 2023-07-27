@@ -71,3 +71,12 @@
     right: 1.5rem;
     color: grey;
 }
+
+.form__image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 1rem;
+    border: 1px solid silver;
+    height: 100px;
+}

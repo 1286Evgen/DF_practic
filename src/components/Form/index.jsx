@@ -1,7 +1,8 @@
-import Input from "./Input";
+import Input from "./fields/Input";
+import Select from "./fields/Select";
+import Textarea from "./fields/Textarea";
+import Image from "./fields/Image";
 import Search from "./Search";
-import Select from "./Select";
-import Textarea from "./Textarea";
 
 import formData from "../../assets/data/form.json";
 import useFormState from "../../hooks/useFormState";
@@ -12,7 +13,7 @@ const Form = () => {
     //const type = "user";
     //const names = ["email", "name", "about", "password", "passwordAccept"];
     const type = "product";
-    const names = ["name", "price", "discount", "description"];
+    const names = ["name", "price", "discount", "pictures", "description"];
     const states = useFormState(type)();
     console.log(states);
     
@@ -34,6 +35,8 @@ const Form = () => {
                         return <Textarea key={el} name={el} {...elData} state={states[el]} />
                     case "select":
                         return <Select key={el} name={el} {...elData} state={states[el]} />
+                    case "image": 
+                    return <Image key={el} name={el} {...elData} state={states[el]} />
                     default:
                         return <Input key={el} name={el} {...elData} state={states[el]} />
                 }
