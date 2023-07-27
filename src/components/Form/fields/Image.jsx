@@ -8,15 +8,23 @@ const Image = ({
     position
     }) => {
         const imgStyle = {
-            backgroundImage: `url(${state[0] || Default})`
+            backgroundImage: `url(${state[0] || Default})`,
+            backgroundSize: state[0] ? "cover" : "auto 80%"
         }
     return (
-        <div className="form__row">
-            <div className="form__image" style={imgStyle}/>
-            <label className="form__label" htmlFor={name}>
+        <div className={`form__row ${position === "right" ? "form__row_image" : ""}`}>
+            <div 
+                className={`form__image ${position === "top" ? "form__image_top" : "form__image_right"}`}
+                style={imgStyle}
+            />
+            <label 
+                className="form__label" 
+                htmlFor={name}>
                 {label}
-                {attr?.required && <>&nbsp;<span 
-                className="form__label_req">*</span></>}         
+                {attr?.required && 
+                <>&nbsp;<span 
+                className="form__label_req">*</span>
+                </>}         
             </label>
             <input 
                 className="form__input" 

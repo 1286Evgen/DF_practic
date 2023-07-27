@@ -11,6 +11,11 @@
     flex-direction: row;
 }
 
+.form__row_image {
+    display: grid;
+    grid-template-columns: auto 8rem;
+}
+
 .form__label {
     color: grey;
 }
@@ -73,10 +78,17 @@
 }
 
 .form__image {
-    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 1rem;
     border: 1px solid silver;
-    height: 100px;
+}
+
+.form__image_top {
+    height: 30rem;
+}
+
+.form__image_right {
+    grid-column: 2/3;
+    grid-row: 1/3;
 }
