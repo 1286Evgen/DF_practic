@@ -3,11 +3,11 @@ import useState from "react";
 import formData from "../../../assets/data/form.json";
 import useFormState from "../../../hooks/useFormState";
 
-import Input from "./fields/Input";
-import Select from "./fields/Select";
-import Textarea from "./fields/Textarea";
-import Image from "./fields/Image";
-import Password from "./fields/Password";
+import Input from "../fields/Input";
+import Select from "../fields/Select";
+import Textarea from "../fields/Textarea";
+import Image from "../fields/Image";
+import Password from "../fields/Password";
 
 const AuthForm = ({
     fields,
@@ -71,7 +71,7 @@ const AuthForm = ({
                 type="submit"
                 className="form__btn"
                 disabled={!(comparePwd && similarPwd)}
-            {btnText}></button>
+            >{btnText}</button>
         </form>
     ) 
 }

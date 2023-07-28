@@ -7,39 +7,61 @@ import Image from "./fields/Image";
 import Password from "./fields/Password";
 import Search from "./Search";
 
-import formData from "../../assets/data/form.json";
-import useFormState from "../../hooks/useFormState";
+import AuthForm from "./forms/AuthForm";
+import ProductForm from "./forms/AuthForm";
+import ReviewForm from "./forms/AuthForm";
 
 import "./index.css";
 
 const Form = ({
-    comparePwd = false
+    type,
+    fieldsType,
+    cb = () => {}
 }) => {
-    const type = "user";
-    const names = ["email", "name", "avatar", "password"];
-    const [similarPwd, setSimilarPwd] = useState(false);
-    //const type = "product";
-    //const names = ["name", "price", "discount", "pictures", "description"];
-    const states = useFormState(type)();
-    console.log(states);
-    
-    const formHandler = (e) => {
-        e.preventDefault();
-        const body = {};
-        names.forEach(el => {
-            body[el] = states[el][0]
-        })
-        console.log(body);
-    }
-    
+    const authFields = ["email", "password"];
+    const regFields = ["email", "name", "avatar", "about", "password"];
+    const pwdFields = ["email", "token", "password"];
+ 
     return (
-        <form onSubmit={formHandler}>
-
-            <button type="submit">Отправить</button>
-        </form>
+        <>
+            {type === "auth" && 
+            <>
+                {fieldsType === "login" && <AuthForm
+                    fields={authFields}
+                    btnText="Войти"
+                    cb={cb}
+                />}
+                {fieldsType === "signup" && <AuthForm
+                    fields={regFields}
+                    comparePwd = {true}
+                    btnText="Зарегистрироваться"
+                    cb={cb}
+                />}
+                {fieldsType === "getToken" && <AuthForm
+                    fields={pwdFields.slice(0,1)}
+                    btnText="Получить токен"
+                    cb={cb}
+                />}
+                {fieldsType === "updPwd" && <AuthForm
+                    fields={authFields.slice(1)}
+                    comparePwd = {true}
+                    btnText="Обновить пароль"
+                    cb={cb}
+                />}
+            </>}
+        </>
     )
 }
 
-export {Input, Search, Textarea, Select, Password, Image};
+export {Input, 
+    Search, 
+    Textarea, 
+    Select, 
+    Password, 
+    Image,
+    AuthForm,
+    ProductForm,
+    ReviewForm
+};
 
 export default Form;
