@@ -34,23 +34,7 @@ const Form = ({
     
     return (
         <form onSubmit={formHandler}>
-            {names.map(el => {
-                const elData = formData[type][el];
-                switch(elData.format) {
-                    case "textarea":
-                        return <Textarea key={el} name={el} {...elData} state={states[el]} />
-                    case "select":
-                        return <Select key={el} name={el} {...elData} state={states[el]} />
-                    case "image": 
-                        return <Image key={el} name={el} {...elData} state={states[el]} />
-                    case "password": 
-                        return <Password key={el} name={el} {...elData} state={states[el]} 
-                        compare={comparePwd}
-                        setSimilar={setSimilarPwd}/>
-                    default:
-                        return <Input key={el} name={el} {...elData} state={states[el]} />
-                }
-            })}
+
             <button type="submit">Отправить</button>
         </form>
     )
