@@ -100,7 +100,7 @@
 }
 
 .form_auth {
-    max-width: 100%;
+    width: 100%;
     max-width: 50rem;
 }
 
@@ -144,7 +144,6 @@
     color: grey;
 }
 
-form__link:hover {
+.form__link:hover {
     color: black;
 }
-

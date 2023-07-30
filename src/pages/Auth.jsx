@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState} from "react";
 
 import Form from "../components/Form";
 import Layout from "../components/Layout";
@@ -26,15 +26,15 @@ export function Auth () {
                 cb={handlers[index]}/>
                 <div className="form__links">
                     {index !== 0 && <button
-                        ckassName="form__links"
+                        className="form__link"
                         onClick={() => setIndex(0)}
                     >Войти</button>}
                     {index !== 1 && <button
-                        ckassName="form__links"
+                        className="form__link"
                         onClick={() => setIndex(1)}
                     >Зарегистрироваться</button>}
                     {index !== 2 && index !== 3 && <button
-                        ckassName="form__links"
+                        className="form__link"
                         onClick={() => setIndex(2)}
                     >Восстановить пароль</button>}
                 </div>

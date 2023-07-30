@@ -70,7 +70,7 @@ const AuthForm = ({
             <button
                 type="submit"
                 className="form__btn"
-                disabled={!(comparePwd && similarPwd)}
+                disabled={comparePwd && !similarPwd}
             >{btnText}</button>
         </form>
     ) 
