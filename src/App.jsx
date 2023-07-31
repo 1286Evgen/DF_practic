@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
+import {Routes, Route, Link} from "react-router-dom";
 import {useState, useEffect} from "react";
 
 import {
@@ -12,10 +12,12 @@ import {
   Profile,
   SingleProd
 } from "./pages";
+import Main from "./context/main";
+import Api from "./Api";
 import staticNews from "./assets/data/news.json";
 
 import Layout from "./components/Layout";
-import Main from "./context/main";
+
 
 function App() {
   let news_1 = sessionStorage.getItem("dog-news");
@@ -30,6 +32,9 @@ function App() {
 
   const [news, setNews] = useState(news_1 || []);
   const [newsLenta, setNewsLenta] = useState(news_2 || []);
+  const [token, setToken] = useState("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjNGYzODRlZTQxOTk3NWZiZDMwMWUiLCJncm91cCI6Imdyb3VwLTExIiwiaWF0IjoxNjc4NTI4MzI3LCJleHAiOjE3MTAwNjQzMjd9.hFwIhkSYXini5j5J0pyysePPmwOSy0SsvtxB-B6ocCQ");
+  const [userId, setUserId] = useState(localStorage.getItem("user-id"));
+  const [api, setApi] = useState(new Api(token));
 
   useEffect(() => {
     if (process.env.NODE_ENV === "development") {
@@ -56,9 +61,18 @@ function App() {
     }
   }, []);
 
+  useEffect(() => {
+    setApi(new Api(token))
+  }, [token])
+
   const mainCtx = {
     news,
-    newsLenta
+    newsLenta,
+    api,
+    token,
+    setToken,
+    userId,
+    setUserId
   }
 
   return (
