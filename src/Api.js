@@ -23,15 +23,15 @@ class Api {
         else {
             return res.json()
                 .then(err => {
-                    console.log(err.message)
+                    alert(err.message)
                 })
         }
     }
     login(body) {
         return fetch(`${this.path}/signin`, {
-            metod: "POST",
+            method: "POST",
             headers: this.setHeaders(true, false),
-            body: this.setBody(body) 
+            body: this.setBody(body)
         })
             .then(res => this.checkRes(res))
     }

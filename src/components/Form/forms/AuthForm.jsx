@@ -24,8 +24,7 @@ const AuthForm = ({
         const body = {};
         fields.forEach(el => {
             body[el] = states[el][0]; 
-        }) 
-        console.log(body);
+        })
         cb(body);
     }
     return (

@@ -5,7 +5,7 @@ import {
   About,
   AddProd,
   Auth,
-  Basket,
+  Basket, 
   Delivery,
   Home,
   Products,
@@ -32,7 +32,7 @@ function App() {
 
   const [news, setNews] = useState(news_1 || []);
   const [newsLenta, setNewsLenta] = useState(news_2 || []);
-  const [token, setToken] = useState("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjNGYzODRlZTQxOTk3NWZiZDMwMWUiLCJncm91cCI6Imdyb3VwLTExIiwiaWF0IjoxNjc4NTI4MzI3LCJleHAiOjE3MTAwNjQzMjd9.hFwIhkSYXini5j5J0pyysePPmwOSy0SsvtxB-B6ocCQ");
+  const [token, setToken] = useState("");
   const [userId, setUserId] = useState(localStorage.getItem("user-id"));
   const [api, setApi] = useState(new Api(token));
 
