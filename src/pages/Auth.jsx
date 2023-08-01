@@ -18,9 +18,9 @@ export function Auth () {
         api.login(body)
             .then(data => {
                 if (data) {
-                    setUserId(data.data._id);
                     localStorage.setItem("user-token", data.token);
                     localStorage.setItem("user-id", data.data._id);
+                    setUserId(data.data._id);
                     navigate("/profile");
                 } 
             })   
@@ -51,12 +51,11 @@ export function Auth () {
             .then(data => {
                 if(data) {
                     setUserId(data.data._id);
-                    localStorege.setItem("user-token", data.token);
-                    localStorege.setItem("user-id", data.data._id);
+                    localStorage.setItem("user-token", data.token);
+                    localStorage.setItem("user-id", data.data._id);
                 }
                 console.log(data);
             })
-        }
     };
 
     const handlers = [authHandler, regHandler, tokenHandler, pwdHandler];

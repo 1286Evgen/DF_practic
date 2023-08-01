@@ -32,7 +32,7 @@ function App() {
 
   const [news, setNews] = useState(news_1 || []);
   const [newsLenta, setNewsLenta] = useState(news_2 || []);
-  const [token, setToken] = useState("");
+  const [token, setToken] = useState(localStorage.getItem("user-token"));
   const [userId, setUserId] = useState(localStorage.getItem("user-id"));
   const [api, setApi] = useState(new Api(token));
 
@@ -65,12 +65,14 @@ function App() {
     setApi(new Api(token))
   }, [token])
 
+  useEffect(() => {
+    setToken(localStorage.getItem("user-token"))
+  }, [userId])
+
   const mainCtx = {
     news,
     newsLenta,
     api,
-    token,
-    setToken,
     userId,
     setUserId
   }
