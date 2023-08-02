@@ -1,25 +1,49 @@
 {
     "header": [
         {
-            "title": "",
-            "path": "",
-            "imgType": "icon",
-            "imgPath": "",
-            "visibility": ""
+            "title": "О нас",
+            "path": "/about"
         },
         {
-            "title": "",
-            "path": "",
-            "imgType": "icon",
-            "imgPath": "",
-            "visibility": ""
+            "title": "Доставка",
+            "path": "/delivery"
         },
         {
-            "title": "",
-            "path": "",
+            "title": "Каталог",
+            "path": "/products",
             "imgType": "icon",
             "imgPath": "",
-            "visibility": ""
+            "visibility": "user",
+            "subLinks": [
+                {
+                    "title": "",
+                    "path": "",
+                    "imgType": "icon",
+                    "imgPath": "",
+                    "visibility": ""
+                },
+                {
+                    "title": "",
+                    "path": "",
+                    "imgType": "icon",
+                    "imgPath": "",
+                    "visibility": ""
+                },
+                {
+                    "title": "",
+                    "path": "",
+                    "imgType": "icon",
+                    "imgPath": "",
+                    "visibility": ""
+                },
+                {
+                    "title": "",
+                    "path": "",
+                    "imgType": "icon",
+                    "imgPath": "",
+                    "visibility": ""
+                }
+            ]
         },
         {
             "title": "",
