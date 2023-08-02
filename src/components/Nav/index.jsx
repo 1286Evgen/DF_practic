@@ -17,3 +17,6 @@ const Nav = ({
         </nav>
     )
 }
+
+export {Link};
+export default Nav;
