@@ -1,6 +1,6 @@
 class Api {
     constructor(token) {
-        this.path = "https://api.react-learning.ru/";
+        this.path = "https://api.react-learning.ru";
         this.token = token;
     }
     setBody(obj) {
@@ -21,7 +21,7 @@ class Api {
             return res.json()
         }
         else {
-            return res.json()
+            res.json()
                 .then(err => {
                     alert(err.message)
                 })
@@ -35,25 +35,30 @@ class Api {
         })
             .then(res => this.checkRes(res))
     }
-    signup(body) {return fetch(`${this.path}/signup`, {
-        metod: "POST",
-        headers: this.setHeaders(true, false),
-        body: this.setBody(body) 
-    })
-        .then(res => this.checkRes(res))}
-    forgotPwd(body) {return fetch(`${this.path}/forgot-password`, {
-        metod: "POST",
-        headers: this.setHeaders(true, false),
-        body: this.setBody(body) 
-    })
-        .then(res => this.checkRes(res))}
+    signup(body) {
+        return fetch(`${this.path}/signup`, {
+            method: "POST",
+            headers: this.setHeaders(true, false),
+            body: this.setBody(body) 
+        })
+        .then(res => this.checkRes(res))
+    }
+    forgotPwd(body) {
+        return fetch(`${this.path}/forgot-password`, {
+            method: "POST",
+            headers: this.setHeaders(true, false),
+            body: this.setBody(body) 
+        })
+        .then(res => this.checkRes(res))
+    }
     resetPwd(body) {
         return fetch(`${this.path}/password-reset/${body.token}`, {
-            metod: "PATCH",
+            method: "PATCH",
             headers: this.setHeaders(true, false),
             body: this.setBody({password:body.password}) 
-    })
-        .then(res => this.checkRes(res))}
+        })
+        .then(res => this.checkRes(res))
+    }
     getProducts() {
         return fetch(`${this.path}/products`, {
             headers: this.setHeaders()
@@ -83,7 +88,7 @@ class Api {
     }
     updProduct(id, body) {
         return fetch(`${this.path}/products/${id}`, {
-            metod: "PATCH",
+            method: "PATCH",
             headers: this.setHeaders(true),
             body: this.setBody(body) 
     })
@@ -91,7 +96,7 @@ class Api {
     }
     delProduct(id) {
         return fetch(`${this.path}/products/${id}`, {
-            metod: "DELETE",
+            method: "DELETE",
             headers: this.setHeaders()
     })
         .then(res => this.checkRes(res))
@@ -145,7 +150,7 @@ class Api {
     }
     updProfile(body, isAvatar=false) {
         return fetch(`${this.path}/users/me${isAvatar ? "/avatar" : ""}`, {
-            metod: "PATCH",
+            method: "PATCH",
             headers: this.setHeaders(true),
             body: this.setBody(body) 
     })

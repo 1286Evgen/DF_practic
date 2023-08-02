@@ -38,7 +38,6 @@ export function Auth () {
             })
     };
     const tokenHandler = (body) => {
-        console.log(body);
         api.forgotPwd(body)
             .then(data => {
                 if (data) {
@@ -53,8 +52,8 @@ export function Auth () {
                     setUserId(data.data._id);
                     localStorage.setItem("user-token", data.token);
                     localStorage.setItem("user-id", data.data._id);
+                    navigate("/profile");
                 }
-                console.log(data);
             })
     };
 
