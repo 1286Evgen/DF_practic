@@ -42,32 +42,24 @@
             ]
         },
         {
-            "title": "",
-            "path": "",
+            "title": "Корзина",
+            "path": "/basket",
             "imgType": "icon",
             "imgPath": "",
-            "visibility": ""
+            "visibility": "user"
         },
         {
-            "title": "",
-            "path": "",
+            "path": "/profile",
             "imgType": "icon",
             "imgPath": "",
-            "visibility": ""
+            "visibility": "user"
         },
         {
-            "title": "",
-            "path": "",
+            "title": "Войти",
+            "path": "/auth",
             "imgType": "icon",
             "imgPath": "",
-            "visibility": ""
-        },
-        {
-            "title": "",
-            "path": "",
-            "imgType": "icon",
-            "imgPath": "",
-            "visibility": ""
+            "visibility": "no-user"
         }
     ],
     "footer": []
