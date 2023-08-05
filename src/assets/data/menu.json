@@ -49,9 +49,9 @@
             "title": "Корзина",
             "path": "/basket",
             "imgType": "icon",
-            "imgPath": "",
+            "imgPath": "lni lni-cart",
             "visibility": "user"
-        },
+          },
         {
             "path": "/profile",
             "imgType": "icon",
