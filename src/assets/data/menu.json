@@ -12,14 +12,14 @@
             "title": "Каталог",
             "path": "/products",
             "imgType": "icon",
-            "imgPath": "",
+            "imgPath": "lni lni-layers",
             "visibility": "user",
             "subLinks": [
                 {
                     "title": "Лакомства",
                     "path": "",
                     "imgType": "icon",
-                    "imgPath": ""
+                    "imgPath": "lni lni-pizza"
                 },
                 {
                     "title": "Игрушки",
