@@ -16,28 +16,32 @@
             "visibility": "user",
             "subLinks": [
                 {
-                    "title": "Лакомства",
-                    "path": "",
-                    "imgType": "icon",
-                    "imgPath": "lni lni-pizza"
+                  "title": "Лакомства",
+                  "path": "/products/category/delicious",
+                  "imgType": "icon",
+                  "imgPath": "lni lni-pizza",
+                  "position": "horizontal"
                 },
                 {
-                    "title": "Игрушки",
-                    "path": "",
-                    "imgType": "icon",
-                    "imgPath": ""
+                  "title": "Игрушки",
+                  "path": "/products/category/toys",
+                  "imgType": "icon",
+                  "imgPath": "lni lni-game",
+                  "position": "horizontal"
                 },
                 {
-                    "title": "Одежда",
-                    "path": "",
-                    "imgType": "icon",
-                    "imgPath": ""
+                  "title": "Одежда",
+                  "path": "/products/category/outerwear",
+                  "imgType": "icon",
+                  "imgPath": "lni lni-t-shirt",
+                  "position": "horizontal"
                 },
                 {
-                    "title": "Прочее",
-                    "path": "",
-                    "imgType": "icon",
-                    "imgPath": ""
+                  "title": "Другое",
+                  "path": "/products/category/other",
+                  "imgType": "icon",
+                  "imgPath": "lni lni-cool",
+                  "position": "horizontal"
                 }
             ]
         },
