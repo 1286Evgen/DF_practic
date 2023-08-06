@@ -52,12 +52,12 @@
             "imgPath": "lni lni-cart",
             "visibility": "user"
           },
-        {
+          {
             "path": "/profile",
             "imgType": "icon",
-            "imgPath": "",
+            "imgPath": "lni lni-user",
             "visibility": "user"
-        },
+          },
         {
             "title": "Войти",
             "path": "/auth",
