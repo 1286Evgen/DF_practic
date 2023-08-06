@@ -58,13 +58,13 @@
             "imgPath": "lni lni-user",
             "visibility": "user"
           },
-        {
+          {
             "title": "Войти",
             "path": "/auth",
             "imgType": "icon",
-            "imgPath": "",
+            "imgPath": "lni lni-enter",
             "visibility": "no-user"
-        }
+          }
     ],
     "footer": []
 }
