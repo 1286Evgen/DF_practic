@@ -17,6 +17,10 @@
     align-items: center;
     gap: 1rem;
     justify-content: flex-end;
+    color: grey;
+}
+.nav__Link:hover {
+    color: black;
 }
 .nav__link_horizontal {
     flex-direction: row;
@@ -28,5 +32,5 @@
 
 }
 .nav__icon {
-    
+    font-size: 3rem;
 }
