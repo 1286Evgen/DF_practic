@@ -10,3 +10,18 @@
 .nav__item {
 
 }
+.nav__Link {
+    display: flex;
+}
+.nav__link_horizontal {
+    flex-direction: row;
+}
+.nav__link_vertical {
+    flex-direction: column;
+}
+.nav__image {
+
+}
+.nav__icon {
+    
+}
