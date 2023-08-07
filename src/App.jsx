@@ -15,8 +15,10 @@ import {
 import Main from "./context/main";
 import Api from "./Api";
 import staticNews from "./assets/data/news.json";
+import menu from "./assets/data/menu.json";
 
 import Layout from "./components/Layout";
+import Nav from "./components/Nav";
 
 
 function App() {
