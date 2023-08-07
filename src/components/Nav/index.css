@@ -1,0 +1,12 @@
+.nav {
+    display: flex;
+}
+.nav_horizontal {
+    flex-direction: row;
+}
+.nav_vertical {
+    flex-direction: column;
+}
+.nav__item {
+
+}
