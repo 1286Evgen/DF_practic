@@ -12,9 +12,13 @@
     position: absolute;
     z-index: 1;
     background-color: white;
-    padding: 1rem 2rem;
+    padding: 2rem;
     border: 1px solid silver;
     border-radius: 1rem;
+    gap: 2rem;
+}
+.nav_submenu .nav__link {
+    justify-content: flex-start;
 }
 .nav__item {
 
