@@ -9,6 +9,7 @@
     flex-direction: column;
 }
 .nav_submenu {
+    display: none;
     position: absolute;
     z-index: 1;
     background-color: white;
@@ -16,12 +17,18 @@
     border: 1px solid silver;
     border-radius: 1rem;
     gap: 2rem;
+    left: calc(-2rem - 1px);
+    top: 100%;
+}
+.nav_submenu .nav__item {
+    padding-bottom: 0;
 }
 .nav_submenu .nav__link {
     justify-content: flex-start;
 }
 .nav__item {
-
+    position: relative;
+    padding-bottom: 1rem;
 }
 .nav__Link {
     height: 100%;
@@ -33,6 +40,9 @@
 }
 .nav__Link:hover {
     color: black;
+}
+.nav__item:hover>.nav_submenu {
+    display: flex;
 }
 .nav__link_horizontal {
     flex-direction: row;

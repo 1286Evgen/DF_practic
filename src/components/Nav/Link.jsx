@@ -5,7 +5,7 @@ import MainCtx from "../../context/main";
 const Link = ({
     path,
     title = "",
-    position = "horizontal", // vertical
+    position = "horizontal", // vertical horizontal
     imgType = "", // icon | image
     imgPath,
     children,
