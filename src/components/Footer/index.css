@@ -1,0 +1,40 @@
+.footer {
+    background-color: grey;
+    color: white;
+}
+.footer__sign {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+}
+.footer__text {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: 1.5rem;
+}
+.footer__menu>.nav {
+    gap: 0;
+}
+
+@media screen and (min-width: 1064px) {
+    .footer__sign {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer__text {
+        font-size: 2rem;
+    }
+    .footer>.layout_dt-3 {
+        grid-template-columns: repeat(3, auto);
+    }
+    .footer__menu {
+        justify-self: flex-end;
+        align-self: center;
+        grid-column-start: 3;
+    }
+    .footer__menu>.nav {
+        align-items: flex-start;
+    }
+}

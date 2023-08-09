@@ -86,19 +86,21 @@ function App() {
   return (
     <Main.Provider value={mainCtx}>
       <Header/>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/products" element={<Products/>}/>
-        <Route path="/products/category/:name" element={<Products isCat={true}/>}/>
-        <Route path="/products/favorites" element={<Products isFav={true}/>}/>
-        <Route path="/product/:id" element={<SingleProd/>}/>
-        <Route path="/product/add" element={<AddProd/>}/>
-        <Route path="/basket" element={<Basket/>}/>
-        <Route path="/profile" element={<Profile/>}/>
-        <Route path="/auth" element={<Auth/>}/>
-        <Route path="/delivery" element={<Delivery/>}/>
-        <Route path="/about" element={<About/>}/>
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/products" element={<Products/>}/>
+          <Route path="/products/category/:name" element={<Products isCat={true}/>}/>
+          <Route path="/products/favorites" element={<Products isFav={true}/>}/>
+          <Route path="/product/:id" element={<SingleProd/>}/>
+          <Route path="/product/add" element={<AddProd/>}/>
+          <Route path="/basket" element={<Basket/>}/>
+          <Route path="/profile" element={<Profile/>}/>
+          <Route path="/auth" element={<Auth/>}/>
+          <Route path="/delivery" element={<Delivery/>}/>
+          <Route path="/about" element={<About/>}/>
+        </Routes>
+      </main>
       <Footer/>
     </Main.Provider>
   );
