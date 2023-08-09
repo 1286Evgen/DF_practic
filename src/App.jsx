@@ -16,6 +16,8 @@ import Main from "./context/main";
 import Api from "./Api";
 
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 import staticNews from "./assets/data/news.json";
 
 function App() {
@@ -97,6 +99,7 @@ function App() {
         <Route path="/delivery" element={<Delivery/>}/>
         <Route path="/about" element={<About/>}/>
       </Routes>
+      <Footer/>
     </Main.Provider>
   );
 }
