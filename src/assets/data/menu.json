@@ -66,5 +66,34 @@
             "visibility": "no-user"
           }
     ],
-    "footer": []
+    "footer": [
+      {
+        "title": "Войти",
+        "path": "/auth",
+        "visibility": "no-user" 
+      },
+      {
+        "title": "Личный кабинет",
+        "path": "/profile",
+        "visibility": "user" 
+      },
+      {
+        "title": "Каталог",
+        "path": "/products",
+        "visibility": "user" 
+      },
+      {
+        "title": "Корзина",
+        "path": "/basket",
+        "visibility": "user" 
+      },
+      {
+        "title": "О магазине",
+        "path": "/about"
+      },
+      {
+        "title": "Доставка и оплата",
+        "path": "/delivery"
+      }
+    ]
 }
