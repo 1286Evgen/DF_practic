@@ -14,8 +14,18 @@
     gap: .5rem;
     font-size: 1.5rem;
 }
+.footer__separator {
+    width: 100%;
+    border: .5px solid;
+    margin: 0;
+}
+.footer.nav {
+    gap: 0;
+    align-items: flex-start;
+}
 .footer__menu>.nav {
     gap: 0;
+    align-items: center;
 }
 
 @media screen and (min-width: 1064px) {
@@ -36,5 +46,8 @@
     }
     .footer__menu>.nav {
         align-items: flex-start;
+    }
+    .footer__separator {
+        grid-column: 1/4;
     }
 }
