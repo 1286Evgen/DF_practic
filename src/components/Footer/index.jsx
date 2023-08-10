@@ -20,9 +20,9 @@ const Footer = () => {
                     <Nav menu={menu.footer} position="vertical"/>
                 </div>
                 <hr className="footer__separator"/>
-                <Nav menu={menu.link_1} position="vertical"/>
-                <Nav menu={menu.link_2} position="vertical"/>
-                <Nav menu={menu.link_3} position="vertical"/>
+                <Nav menu={menu.links_1} position="vertical"/>
+                <Nav menu={menu.links_2} position="vertical"/>
+                <Nav menu={menu.links_3} position="vertical"/>
             </Layout>
         </footer>
     )
