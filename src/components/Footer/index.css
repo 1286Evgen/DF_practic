@@ -19,12 +19,15 @@
     border: .5px solid;
     margin: 0;
 }
-.footer.nav {
-    gap: 0;
+.footer .nav {
+    gap: 2rem;
     align-items: flex-start;
 }
+.footer .nav__item {
+    padding: 0;
+}
 .footer__menu>.nav {
-    gap: 0;
+    gap: 1rem;
     align-items: center;
 }
 

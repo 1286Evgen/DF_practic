@@ -2,6 +2,26 @@ import {useContext} from "react";
 import {Link as RouterLink} from "react-router-dom";
 
 import MainCtx from "../../context/main";
+
+const LinkItem = ({
+    path,
+    position,
+    as,
+    children
+}) => {
+    return (
+        <>
+            {as === "link" && 
+                <RouterLink
+                    to={path}
+                    className={`nav__link nav__link_${position}`}
+                    >
+                        {children}
+                </RouterLink>}   
+        </>
+    )
+}
+
 const Link = ({
     path,
     title = "",
@@ -9,7 +29,8 @@ const Link = ({
     imgType = "", // icon | image
     imgPath,
     children,
-    visibility = "all" // user | no-user
+    visibility = "all", // user | no-user
+    as = "link"
 }) => {
     const {userId} = useContext(MainCtx);
     return (
