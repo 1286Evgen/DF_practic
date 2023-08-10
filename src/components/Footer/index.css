@@ -41,6 +41,7 @@
     }
     .footer>.layout_dt-3 {
         grid-template-columns: repeat(3, auto);
+        justify-content: space-between;
     }
     .footer__menu {
         justify-self: flex-end;

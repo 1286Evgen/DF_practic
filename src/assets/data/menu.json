@@ -95,5 +95,15 @@
         "title": "Доставка и оплата",
         "path": "/delivery"
       }
-    ]
+    ],
+    "link_1": [
+      {
+        "title": "",
+        "path": "",
+        "caption": true,
+        "as": "a"
+      }
+    ],
+    "link_2": [],
+    "link_3": []
 }
