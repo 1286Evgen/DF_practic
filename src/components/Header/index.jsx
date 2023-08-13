@@ -1,8 +1,10 @@
 import Layout from "../Layout";
-import Logo from "Logo";
+import Logo from "../Logo";
 import Nav from "../Nav";
 import {Search} from "../Form";
 import menu from "../../assets/data/menu.json";
+
+import "./index.css";
 
 const Header = () => {
     return (
